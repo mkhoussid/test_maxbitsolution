@@ -1,12 +1,6 @@
 body {
-  margin: 0;
-  outline: none;
-  padding: 0;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  overflow: hidden;
+	margin: 0;
+	outline: none;
+	padding: 0;
+	width: 100%;
 }

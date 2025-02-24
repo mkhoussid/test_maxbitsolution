@@ -1,16 +1,13 @@
-import { DependencyList, useLayoutEffect, useRef } from "react";
+import * as React from 'react';
 
-export function useUpdateLayoutEffect(
-  effect: () => void,
-  dependencies: DependencyList = []
-) {
-  const isInitialMount = useRef(true);
+export function useUpdateLayoutEffect(effect: () => void, dependencies: React.DependencyList = []) {
+    const isInitialMount = React.useRef(true);
 
-  useLayoutEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
-    } else {
-      effect();
-    }
-  }, dependencies);
+    React.useLayoutEffect(() => {
+        if (isInitialMount.current) {
+            isInitialMount.current = false;
+        } else {
+            effect();
+        }
+    }, dependencies);
 }

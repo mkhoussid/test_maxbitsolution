@@ -1,15 +1,15 @@
-import * as React from "react";
+import styled from '@emotion/styled';
+import * as React from 'react';
 
-// @ts-expect-error
-import styles from "./styles.module.css";
-
-export const CocktailInstructions = React.memo<{ instructions: string }>(
-  ({ instructions }) => {
+export const CocktailInstructions = React.memo<{ instructions: string }>(({ instructions }) => {
     return (
-      <div className={styles.gutterBottom}>
-        <div>{"Instructions:"}</div>
-        <div>{instructions}</div>
-      </div>
+        <CocktailInstructionsContainer>
+            <div>{'Instructions:'}</div>
+            <div>{instructions}</div>
+        </CocktailInstructionsContainer>
     );
-  }
-);
+});
+
+const CocktailInstructionsContainer = styled.div`
+    margin-bottom: 1rem;
+`;

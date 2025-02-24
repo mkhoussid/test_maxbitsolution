@@ -1,5 +1,5 @@
-import * as React from "react";
+import * as React from 'react';
 
 export const InvalidCocktailSegment = React.memo(() => {
-  return <div>Invalid cocktail code</div>;
+    return <div>Invalid cocktail code</div>;
 });

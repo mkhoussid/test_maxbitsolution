@@ -1,23 +1,21 @@
-import * as React from "react";
-import clsx from "clsx";
+import styled from '@emotion/styled';
+import * as React from 'react';
 
-// @ts-expect-error
-import styles from "./styles.module.css";
-import { ICocktailInfo } from "../../interfaces/ICocktailInfo";
+import { ICocktailInfo } from '../../interfaces/ICocktailInfo';
 
-export const CocktailInfo = React.memo<
-  Pick<ICocktailInfo, "strDrink" | "strCategory" | "strAlcoholic" | "strGlass">
->(({ strDrink, strCategory, strAlcoholic, strGlass }) => {
-  return (
-    <>
-      <div className={clsx(styles.infoElement, styles.gutterBottom)}>
-        {strDrink}
-      </div>
-      <div className={styles.infoElement}>{strCategory}</div>
-      <div className={styles.infoElement}>{strAlcoholic}</div>
-      <div className={clsx(styles.infoElement, styles.gutterBottom)}>
-        {strGlass}
-      </div>
-    </>
-  );
-});
+export const CocktailInfo = React.memo<Pick<ICocktailInfo, 'strDrink' | 'strCategory' | 'strAlcoholic' | 'strGlass'>>(
+    ({ strDrink, strCategory, strAlcoholic, strGlass }) => {
+        return (
+            <>
+                <InfoElement withGutterBottom>{strDrink}</InfoElement>
+                <InfoElement>{strCategory}</InfoElement>
+                <InfoElement>{strAlcoholic}</InfoElement>
+                <InfoElement withGutterBottom>{strGlass}</InfoElement>
+            </>
+        );
+    }
+);
+
+const InfoElement = styled.div<{ withGutterBottom?: boolean }>`
+    ${({ withGutterBottom }) => `margin-bottom: ${+!!withGutterBottom}rem;`}
+`;
