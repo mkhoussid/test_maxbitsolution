@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"target": "es2021",
+		"module": "commonjs",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true,
+		"outDir": "./build",
+		"rootDir": "./",
+		"noEmit": false,
+		"typeRoots": ["node_modules/@types"],
+		"baseUrl": "./",
+		"allowJs": true,
+		"strictNullChecks": true,
+		"strict": true,
+		"alwaysStrict": true,
+		"strictPropertyInitialization": true
+	},
+	"exclude": ["build"],
+	"include": ["src/**/*"]
+}

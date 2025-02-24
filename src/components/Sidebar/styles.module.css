@@ -1,0 +1,26 @@
+.sidebar {
+  border: 1px solid black;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-right: 0.5rem;
+}
+
+.sidebarOption {
+  padding: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background-color: rgba(1, 1, 1, 0.3);
+  }
+}
+
+.active {
+  background-color: rgba(1, 1, 1, 0.1);
+  cursor: default;
+}
+
+.loading {
+  cursor: wait;
+}
